@@ -1,0 +1,389 @@
+.workspace-composer-wrapper {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================================
+   MAIN COMPOSER
+========================================= */
+
+.workspace-composer {
+  width: 100%;
+
+  border: 1px solid var(--color-border-strong);
+  border-radius: 16px;
+
+  background: var(--color-panel-primary);
+
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.28);
+
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.workspace-composer:focus-within {
+  border-color: rgba(59, 130, 246, 0.5);
+
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.3),
+    0 0 0 3px rgba(59, 130, 246, 0.06);
+}
+
+/* =========================================
+   SINGLE HORIZONTAL LINE
+========================================= */
+
+.workspace-composer__main {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  width: 100%;
+  min-height: 68px;
+
+  padding: 10px 12px;
+}
+
+/* =========================================
+   CAPABILITY CHIP
+========================================= */
+
+.workspace-capability-chip {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+
+  gap: 7px;
+
+  height: 36px;
+
+  margin-right: 10px;
+  padding: 0 7px 0 10px;
+
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  border-radius: 9px;
+
+  background: rgba(96, 165, 250, 0.09);
+
+  color: var(--color-agent-ai);
+
+  white-space: nowrap;
+}
+
+.workspace-capability-chip__icon {
+  display: grid;
+  place-items: center;
+
+  width: 21px;
+  height: 21px;
+
+  color: var(--color-agent-ai);
+}
+
+.workspace-capability-chip__label {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.workspace-capability-chip__remove {
+  display: grid;
+  place-items: center;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: var(--color-text-muted);
+
+  cursor: pointer;
+
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.workspace-capability-chip__remove:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: var(--color-text-primary);
+}
+
+/* =========================================
+   INPUT
+========================================= */
+
+.workspace-composer__input {
+  flex: 1;
+  min-width: 0;
+}
+
+.workspace-composer__input textarea {
+  display: block;
+
+  width: 100%;
+  height: 42px;
+  min-height: 42px;
+  max-height: 42px;
+
+  padding: 8px 4px;
+
+  border: 0;
+  outline: none;
+
+  resize: none;
+  overflow: hidden;
+
+  background: transparent;
+
+  color: var(--color-text-primary);
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: var(--font-weight-regular);
+
+  line-height: 26px;
+}
+
+.workspace-composer__input textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* =========================================
+   RIGHT ACTION
+========================================= */
+
+.workspace-composer__action {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 auto;
+
+  margin-left: 10px;
+}
+
+.workspace-mic-button,
+.workspace-send-button {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.workspace-mic-button {
+  background: var(--color-panel-secondary);
+
+  color: var(--color-text-secondary);
+}
+
+.workspace-mic-button:hover {
+  background: var(--color-border-strong);
+
+  color: var(--color-text-primary);
+
+  transform: translateY(-1px);
+}
+
+.workspace-send-button {
+  background: var(--color-primary);
+
+  color: #ffffff;
+}
+
+.workspace-send-button:hover {
+  background: #4a8cf7;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   ATTACH FILES
+========================================= */
+
+.workspace-composer__attachment {
+  display: flex;
+  align-items: center;
+
+  margin-top: 8px;
+}
+
+.workspace-attach-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  min-height: 30px;
+
+  padding: 0 9px;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: var(--color-text-muted);
+
+  cursor: pointer;
+
+  font-size: 11px;
+
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.workspace-attach-button:hover {
+  background: var(--color-panel-secondary);
+
+  color: var(--color-text-primary);
+}
+
+/* =========================================
+   CAPABILITY BUTTONS
+========================================= */
+
+.workspace-capabilities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+.workspace-capability-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  height: 40px;
+
+  padding: 0 14px 0 8px;
+
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 9px;
+
+  background: var(--color-bg-elevated);
+
+  color: var(--color-text-secondary);
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    background var(--duration-normal) var(--ease-standard),
+    color var(--duration-normal) var(--ease-standard),
+    transform var(--duration-normal) var(--ease-standard);
+}
+
+.workspace-capability-button:hover {
+  border-color: var(--color-border-strong);
+
+  background: var(--color-panel-secondary);
+
+  color: var(--color-text-primary);
+
+  transform: translateY(-2px);
+}
+
+.workspace-capability-button--selected {
+  border-color: rgba(96, 165, 250, 0.4);
+
+  background: rgba(96, 165, 250, 0.08);
+
+  color: var(--color-agent-ai);
+
+  box-shadow:
+    0 6px 20px rgba(59, 130, 246, 0.08);
+}
+
+.workspace-capability-button__icon {
+  display: grid;
+  place-items: center;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 7px;
+
+  background: var(--color-panel-primary);
+
+  color: var(--color-agent-ai);
+}
+
+.workspace-capability-button__label {
+  /* font-size: 11px; */
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+}
+
+/* =========================================
+   HINT
+========================================= */
+
+.workspace-composer__hint {
+  margin: 11px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+.workspace-attach-button {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 auto;
+
+  width: 38px;
+  height: 38px;
+
+  margin-right: 8px;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: var(--color-text-muted);
+
+  cursor: pointer;
+
+  transition:
+    background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.workspace-attach-button:hover {
+  background: var(--color-panel-secondary);
+
+  color: var(--color-text-primary);
+
+  transform: scale(1.04);
+}
+
+.workspace-send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}

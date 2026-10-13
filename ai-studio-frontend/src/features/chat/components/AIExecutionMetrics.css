@@ -1,0 +1,41 @@
+.ai-execution-metrics {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-secondary);
+}
+
+.ai-execution-metrics__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+}
+
+.ai-execution-metrics__item svg {
+  flex: 0 0 auto;
+  color: var(--color-token-usage);
+}
+
+.ai-execution-metrics__label {
+  color: var(--color-text-muted);
+}
+
+.ai-execution-metrics__value {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.ai-execution-metrics__divider {
+  width: 1px;
+  height: 14px;
+  margin: 0 9px;
+  background: var(--color-border-subtle);
+}
