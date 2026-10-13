@@ -1,0 +1,5 @@
+export const USER_EMAIL_MAX_LENGTH = 320;
+
+export const USER_DISPLAY_NAME_MAX_LENGTH = 100;
+
+export const USER_AVATAR_URL_MAX_LENGTH = 2048;

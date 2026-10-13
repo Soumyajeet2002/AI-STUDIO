@@ -1,0 +1,34 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+coverage/
+
+# environment
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Nest
+.nest/
+
+# Testing
+coverage/

@@ -1,0 +1,13 @@
+export const PROJECT_NAME_MAX_LENGTH = 120;
+
+export const PROJECT_DESCRIPTION_MAX_LENGTH = 2000;
+
+export const PROJECT_ICON_MAX_LENGTH = 64;
+
+export const PROJECT_COLOR_MAX_LENGTH = 32;
+
+export const PROJECT_DEFAULT_PAGE = 1;
+
+export const PROJECT_DEFAULT_PAGE_SIZE = 20;
+
+export const PROJECT_MAX_PAGE_SIZE = 100;
